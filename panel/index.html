@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NAVIS · Panel del programa</title>
+<meta name="description" content="Para el equipo del programa: coordinación, apoyo en coordinación y jefatura.">
+<meta name="theme-color" content="#0B2A44">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="../icons/navis-panel-32.png">
+<link rel="apple-touch-icon" href="../icons/navis-panel-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NAVIS">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="../estilo.css">
+<script src="../config.js"></script>
+</head>
+<body data-sw="../sw.js">
+<div class="abriendo" role="status" aria-live="polite">
+  <img src="../icons/navis-panel-192.png" alt="">
+  <div><b style="font-size:20px">Abriendo NAVIS…</b><br><span style="opacity:.85">Entrará con su cuenta de la universidad.</span></div>
+  <a id="linkCuenta" href="#">¿Se abrió con otra cuenta? Elegir la cuenta UAndes</a>
+</div>
+<main class="wrap">
+  <div class="marca"><img src="../icons/navis-panel-192.png" alt=""><div><h1>NAVIS <span style="font-weight:600;opacity:.85">MF-PM</span></h1><p>Sistema de Gestión Académica</p></div></div>
+
+  <section class="card">
+    <h2>Instale el acceso en este aparato</h2>
+    <p>Queda un ícono en su pantalla de inicio o en su escritorio. Al tocarlo, NAVIS se abre directamente con su cuenta de la universidad.</p>
+    <button class="btn pri oculto" id="btnInstalar" type="button">Instalar NAVIS</button>
+    <div class="pasos" id="pasosGenericos"></div>
+    <div class="pasos oculto" id="pasosIOS"><b>En iPhone o iPad (Safari):</b><ol>
+      <li>Toque el botón <b>Compartir</b> (el cuadrado con una flecha hacia arriba).</li>
+      <li>Elija <b>Agregar a pantalla de inicio</b> y luego <b>Agregar</b>.</li></ol>
+      <span style="font-size:13.5px;color:#4A5B6C">Si abrió este enlace desde el correo y no ve el botón Compartir, ábralo primero en Safari.</span></div>
+    <p class="oculto" id="instalado" style="margin:10px 0 0;color:#1C7A5E;font-weight:700">Listo: NAVIS quedó instalado. Ya puede abrirlo desde su ícono.</p>
+  </section>
+
+  <section class="card">
+    <div class="fila"><img src="../icons/navis-panel-192.png" alt=""><div><h2>NAVIS · Panel del programa</h2><p style="margin:0">Para el equipo del programa: coordinación, apoyo en coordinación y jefatura.</p></div></div>
+    <button class="btn pri" type="button" onclick="navisAbrir()" style="margin-top:14px">Abrir NAVIS ahora</button>
+    <button class="btn sec" type="button" onclick="navisElegirCuenta()">Entrar eligiendo la cuenta UAndes</button>
+  </section>
+
+  <p class="nota">Use su cuenta <b>@miuandes.cl</b> o <b>@uandes.cl</b>. Si su teléfono o navegador tiene además una cuenta personal de Gmail, use «Entrar eligiendo la cuenta UAndes»: no necesita cerrar ni desvincular su cuenta personal.<br>En el computador, lo más cómodo es un perfil de Chrome solo para la universidad.</p>
+</main>
+<script src="../navis.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+:root{--bg:#0B2A44;--bg2:#0E3A5C;--card:#FFFFFF;--ink:#0E1B2A;--muted:#4A5B6C;--line:#D8E1EA;--pri:#0A5C8E;--acc:#2EC4B6;--rad:16px;color-scheme:light;}
+*{box-sizing:border-box;}
+html,body{margin:0;min-height:100%;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);}
+body{background:radial-gradient(1200px 600px at 20% -10%,#145C8A 0%,transparent 60%),linear-gradient(160deg,var(--bg2),var(--bg));
+  padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0);}
+.wrap{max-width:640px;margin:0 auto;padding:28px 18px 40px;}
+.marca{display:flex;align-items:center;gap:14px;color:#fff;margin-bottom:22px;}
+.marca img{width:64px;height:64px;border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.3);}
+.marca h1{margin:0;font-size:26px;letter-spacing:.02em;font-weight:800;} .marca p{margin:2px 0 0;font-size:14px;opacity:.85;}
+.card{background:var(--card);border-radius:var(--rad);padding:18px;box-shadow:0 10px 30px rgba(0,0,0,.25);margin-bottom:14px;}
+.card h2{margin:0 0 4px;font-size:19px;} .card p{margin:0 0 12px;color:var(--muted);font-size:15px;line-height:1.45;}
+.fila{display:flex;align-items:center;gap:12px;}
+.fila img{width:52px;height:52px;border-radius:12px;flex:0 0 52px;}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:50px;border-radius:12px;border:0;font:inherit;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;}
+.btn.pri{background:var(--pri);color:#fff;} .btn.sec{background:#EEF4F9;color:var(--pri);margin-top:10px;}
+.btn:focus-visible{outline:3px solid var(--acc);outline-offset:2px;}
+.pasos{margin:10px 0 0;padding:12px 14px;border-radius:12px;background:#F4F8FB;font-size:15px;line-height:1.5;color:var(--ink);}
+.pasos ol{margin:6px 0 0;padding-left:20px;} .pasos b{font-weight:700;}
+.nota{font-size:13.5px;color:#C9D8E6;line-height:1.5;margin:16px 4px 0;}
+.nota a{color:#9FE7DD;}
+.abriendo{display:none;min-height:100vh;align-items:center;justify-content:center;flex-direction:column;gap:16px;color:#fff;text-align:center;padding:24px;}
+.abriendo img{width:96px;height:96px;border-radius:22px;}
+.abriendo a{color:#9FE7DD;font-size:14px;}
+body.lanzando .wrap{display:none;} body.lanzando .abriendo{display:flex;}
+.oculto{display:none !important;}
